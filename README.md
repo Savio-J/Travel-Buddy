@@ -1,4 +1,4 @@
-Create a databased named users.db and modify the location specifiacation line for the database in app.py(line 16).
+Download databased named users.db and modify the location specifiacation line for the database in app.py to the location of the file(line 16).
 SQLite commands for creating database users.db if necessary(use DB Browser):
 CREATE TABLE "user" (
 	"id"	INTEGER NOT NULL,
