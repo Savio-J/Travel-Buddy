@@ -1,5 +1,5 @@
 Create a databased named users.db and modify the location specifiacation line for the database in app.py(line 16).
-Create the following database in users.db(use DB Browser):
+SQLite commands for creating database users.db if necessary(use DB Browser):
 CREATE TABLE "user" (
 	"id"	INTEGER NOT NULL,
 	"username"	VARCHAR(80) NOT NULL,
