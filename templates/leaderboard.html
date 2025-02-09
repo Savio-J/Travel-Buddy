@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylel.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Leaderboard</h1>
+        <div class="leaderboard-container">
+            <table class="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Places Visited</th>
+                        <th>Badges</th>
+                        <th>Travel Points</th>
+                    </tr>
+                </thead>
+                {% for user in users %}
+                    <tr class="rank-{{ user.rank if user.rank <= 3 else '' }}">
+                        <td>{{ user.rank }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.places }}</td>
+                        <td>{{ user.achievements }}</td>
+                        <td>{{ user.travel_points }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <a href="/map" class="home-link">Back to Map</a>
+    </div>
+    <script src="{{ url_for('static', filename='mainl.js') }}"></script>
+</body>
+</html>
