@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendations - Travel Buddy{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='recommendations.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="recommendations-container">
+    <h1>Recommended Places</h1>
+    <p>Explore these amazing destinations curated just for you!</p>
+
+    <div class="places-grid">
+      {% for place in places %}
+        <div class="place-card">
+          <div class="place-details">
+            <h2>{{ place.name }}</h2>
+            <h3 class="place-description">{{ place.description }}</h3>
+            <h3 class="place-type"><strong>Type:</strong> {{ place.type }}</h3>
+            <button class="view-on-map" data-lat="{{ place.lat }}" data-lon="{{ place.lon }}">View on Map</button>
+            <div class="place-image">
+              <!-- Add an image for each place if available -->
+              <img src="{{ url_for('static', filename='images/' + place.name.lower() + '.jpg') }}" alt="{{ place.name }}">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{{ url_for('static', filename='recommendations.js') }}"></script>
+{% endblock %}
