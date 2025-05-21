@@ -3,7 +3,7 @@ from openai import OpenAI
 from github_fetch import fetch_github_file
 
 # Mistral API Setup (Using Together AI as the provider)
-MISTRAL_API_KEY = "j4RNjKWz0bjaPjJMkXQXZpkPuFffWM7R"
+MISTRAL_API_KEY = "*********************************"
 client = OpenAI(api_key=MISTRAL_API_KEY, base_url="https://api.mistral.ai/v1")
 
 # Mapping user queries to relevant HTML files
