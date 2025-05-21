@@ -2,7 +2,7 @@ import requests
 import base64
 
 # GitHub details (Store the token securely in environment variables)
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "****************************************************"
 REPO_OWNER = "Savio-J"
 REPO_NAME = "MINI-UNOFFICIAL"
 
